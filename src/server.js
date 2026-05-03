@@ -91,5 +91,7 @@ app.delete('/user/:id', authenticate, (req, res) => {
   });
 });
 
-const port = process.env.PORT || 3000;
-app.listen(port);
+const port = process.env.PORT || 3001;
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
+});
