@@ -91,5 +91,7 @@ app.delete('/user/:id', authenticate, (req, res) => {
   });
 });
 
-const port = process.env.PORT || 3000;
-app.listen(port);
+const port = process.env.PORT || 8080;
+app.listen(port, '0.0.0.0', () => {
+  console.log(`API server listening at http://0.0.0.0:${port}`);
+});
