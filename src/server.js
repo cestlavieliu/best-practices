@@ -24,6 +24,10 @@ function authenticate(req, res, next) {
   next();
 }
 
+app.get('/health', (req, res) => {
+  res.json({ status: 'ok', uptime: process.uptime() });
+});
+
 app.post('/login', (req, res) => {
   const { username, password } = req.body;
   if (!username || !password) {
