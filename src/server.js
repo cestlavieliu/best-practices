@@ -1,6 +1,6 @@
 const crypto = require('crypto');
 const express = require('express');
-const mysql = require('mysql');
+const mysql = require('mysql2');
 const bcrypt = require('bcrypt');
 
 const app = express();
